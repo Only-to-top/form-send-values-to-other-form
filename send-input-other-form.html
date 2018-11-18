@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Give values from one form to another</title>
+	<style>
+		.send-values{border: 1px solid #ddd; padding: 10px 20px; border-radius: 5px; cursor: pointer; display: inline-block; margin: 20px;}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="text" value="" id="value-form1">
+		<input type="text" value="" id="value-form2">
+		<div class="send-values">Send</div>
+	</form>
+	<form>
+		<input type="text" value="" id="value-form3">
+		<input type="text" value="" id="value-form4">
+	</form>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$('.send-values').click(function(){
+				$('#value-form3').val( $('#value-form1').val() );
+				$('#value-form4').val( $('#value-form2').val() );
+			});
+		});
+	</script>
+</body>
+</html>
